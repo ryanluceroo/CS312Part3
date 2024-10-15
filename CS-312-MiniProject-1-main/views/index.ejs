@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Title and link to the CSS file -->
+    <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <!-- Container for the entire blog content -->
+    <div class="container">
+        <!-- Main title centered on the page -->
+        <h1>Blog Posts</h1>
+
+        <!-- Centered 'Create New Post' button -->
+        <div class="new-post">
+            <a href="/create">Create New Post</a>
+        </div>
+
+        <!-- Check if there are any posts to display -->
+        <% if (posts.length > 0) { %>
+            <!-- Loop through the posts array and display each post -->
+            <% posts.forEach(post => { %>
+                <!-- Each post has its own styled container -->
+                <div class="post">
+                    <!-- Post title -->
+                    <h2><%= post.title %></h2>
+
+                    <!-- Post content -->
+                    <p><%= post.body %></p>
+
+                    <!-- Author and date of the post -->
+                    <small>By <%= post.creator_name %> on <%= post.date_created %></small>
+
+                    <!-- Links for editing and deleting the post -->
+                    <a href="/edit/<%= post.blog_id %>">Edit</a>
+                    <a href="/delete/<%= post.blog_id %>">Delete</a>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <!-- Message when there are no posts available -->
+            <p>No posts available! Make a post please!</p>
+        <% } %>
+    </div>
+</body>
+</html>

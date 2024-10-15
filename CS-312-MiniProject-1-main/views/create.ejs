@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+</head>
+<body>
+    <h1>Create a New Post</h1>
+    <form action="/create" method="POST">
+        <input type="text" name="title" placeholder="Post Title" required>
+        <input type="text" name="author" placeholder="Author Name" required>
+        <textarea name="content" placeholder="Write your post here..." required></textarea>
+        <button type="submit">Create</button>
+    </form>
+    <a href="/">Back to posts</a>
+</body>
+</html>

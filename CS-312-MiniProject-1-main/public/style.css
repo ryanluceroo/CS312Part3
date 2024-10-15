@@ -1,0 +1,254 @@
+/* General styles for the entire page */
+body {
+    /* Sets the font for the entire app */
+    font-family: Arial, sans-serif;
+
+    /* Light grey background for the entire page */
+    background-color: #f0f0f0;
+
+    /* Remove default margin and padding */
+    margin: 0;
+    padding: 0;
+
+    /* Centers the content horizontally using flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for the container that holds all content */
+.container {
+    /* Makes the container take up 90% of the screen width */
+    width: 90%;
+
+    /* Maximum width for larger screens */
+    max-width: 800px;
+
+    /* White background for the content */
+    background-color: white;
+
+    /* Adds padding inside the container for better spacing */
+    padding: 20px;
+
+    /* Rounded corners for a smooth look */
+    border-radius: 8px;
+
+    /* Adds a light shadow to the container for a 3D effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* Adds space between the container and the top of the page */
+    margin-top: 20px;
+}
+
+/* Center and style the main title */
+h1 {
+    /* Centers the text horizontally */
+    text-align: center;
+
+    /* Sets a large font size for the title */
+    font-size: 2.5em;
+
+    /* Adds space below the title */
+    margin-bottom: 20px;
+
+    /* Sets a dark grey color for the title text */
+    color: #333;
+}
+
+/* Center and style the "Create New Post" button container */
+.new-post {
+    /* Block-level element to occupy full width */
+    display: block;
+
+    /* Centers the button horizontally */
+    text-align: center;
+
+    /* Adds space below the button */
+    margin-bottom: 20px;
+}
+
+/* Style for the "Create New Post" button */
+.new-post a {
+    /* Adds padding inside the button for a bigger clickable area */
+    padding: 10px 20px;
+
+    /* Sets a blue background color */
+    background-color: #007BFF;
+
+    /* Makes the text color white */
+    color: white;
+
+    /* Removes the underline from the link */
+    text-decoration: none;
+
+    /* Rounds the corners of the button */
+    border-radius: 5px;
+
+    /* Slightly increases the font size for better visibility */
+    font-size: 1.2em;
+
+    /* Adds a smooth transition effect when hovering */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "Create New Post" button */
+.new-post a:hover {
+    /* Darkens the button color on hover */
+    background-color: #0056b3;
+}
+
+/* Style for individual blog post containers */
+.post {
+    /* Adds a light grey border around each post */
+    border: 1px solid #ccc;
+
+    /* Sets a light background color for each post */
+    background-color: #f9f9f9;
+
+    /* Adds padding inside the post for better spacing */
+    padding: 15px;
+
+    /* Adds space between posts */
+    margin: 10px 0;
+
+    /* Rounds the corners of each post */
+    border-radius: 8px;
+}
+
+/* Style for blog post titles */
+.post h2 {
+    /* Sets a slightly larger font size for post titles */
+    font-size: 1.5em;
+
+    /* Sets a dark grey color for the title */
+    color: #333;
+}
+
+/* Style for the post content */
+.post p {
+    /* Sets a readable font size for the post content */
+    font-size: 1.1em;
+
+    /* Increases line height for better readability */
+    line-height: 1.6;
+}
+
+/* Style for small text, like author and date */
+.post small {
+    /* Displays the author and date in a block format */
+    display: block;
+
+    /* Sets a light grey color for the author and date */
+    color: #777;
+
+    /* Adds space below the small text */
+    margin-bottom: 10px;
+}
+
+/* Style for the Edit and Delete links */
+.post a {
+    /* Removes the underline from the links */
+    text-decoration: none;
+
+    /* Sets the color of the links to blue */
+    color: #007BFF;
+
+    /* Adds space between the links */
+    margin-right: 15px;
+
+    /* Makes the links bold for better visibility */
+    font-weight: bold;
+}
+
+/* Hover effect for the Edit and Delete links */
+.post a:hover {
+    /* Adds an underline when hovering over the links */
+    text-decoration: underline;
+}
+
+/* Form styles for the post creation and editing forms */
+form {
+    /* Centers the form horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Adds spacing between form elements */
+    gap: 15px;
+}
+
+/* Style for text inputs and textarea */
+form input, form textarea {
+    /* Makes the inputs and textarea take up 100% of the available width */
+    width: 100%;
+
+    /* Limits the maximum width to 600px for larger screens */
+    max-width: 600px;
+
+    /* Adds padding inside the input and textarea fields */
+    padding: 10px;
+
+    /* Adds a light grey border */
+    border: 1px solid #ccc;
+
+    /* Rounds the corners of the input fields */
+    border-radius: 5px;
+
+    /* Sets a readable font size */
+    font-size: 1em;
+
+    /* Sets a light background color for the input fields */
+    background-color: #f9f9f9;
+}
+
+/* Style for the form submission button */
+form button {
+    /* Adds padding inside the button */
+    padding: 10px 20px;
+
+    /* Sets a green background color */
+    background-color: #28a745;
+
+    /* Makes the text color white */
+    color: white;
+
+    /* Removes the border around the button */
+    border: none;
+
+    /* Rounds the corners of the button */
+    border-radius: 5px;
+
+    /* Changes the cursor to a pointer to indicate that the button is clickable */
+    cursor: pointer;
+
+    /* Sets a slightly larger font size */
+    font-size: 1.2em;
+
+    /* Adds a smooth transition effect when hovering */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the form submission button */
+form button:hover {
+    /* Darkens the button color when hovering */
+    background-color: #218838;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    /* Make the container take up 100% of the width on small screens */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Ensure input fields and textarea are fully responsive */
+    form input, form textarea {
+        width: 100%;
+    }
+
+    /* Adjust the title font size for smaller screens */
+    h1 {
+        font-size: 2em;
+    }
+}
